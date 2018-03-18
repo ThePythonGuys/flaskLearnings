@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          background-image: url("static/css/679140.png");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center;
+          background-color: #3B3C43;
+      }
+    </style>
+    <title>Eric and Jason - Flask App V1.0</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Eric and Jason - Flask App V1.0</h1>
+          <strong><nav>
+            <ul class="menu">
+              <li><a href="{{ url_for('create_aka_obs') }}">Akamai Obfuscated DNS</a></li>
+            </ul>
+          </nav></strong>
+        </div>
+    </header>
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
